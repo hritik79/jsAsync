@@ -470,14 +470,6 @@
                 <td>$86,500</td>
             </tr>
             <tr>
-                <td>Shad Decker</td>
-                <td>Regional Director</td>
-                <td>Edinburgh</td>
-                <td>51</td>
-                <td>2008-11-13</td>
-                <td>$183,000</td>
-            </tr>
-            <tr>
                 <td>Michael Bruce</td>
                 <td>Javascript Developer</td>
                 <td>Singapore</td>
@@ -492,6 +484,14 @@
                 <td>27</td>
                 <td>2011-01-25</td>
                 <td>$112,000</td>
+            </tr>
+            <tr>
+                <td>James Cooper</td>
+                <td>Javascript Developer</td>
+                <td>New York</td>
+                <td>29</td>
+                <td>2011-01-25</td>
+                <td>$80,000</td>
             </tr>
         </tbody>
         <tfoot>
@@ -513,6 +513,89 @@
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script>
+        /*var minDate, maxDate;
+
+        // Custom filtering function which will search data in column four between two values
+        $.fn.dataTable.ext.search.push(
+            function (settings, data, dataIndex) {
+                debugger
+                var min = minDate;
+                var max = maxDate;
+                var date = new Date(data[4]);
+
+                if (
+                    (min === null && max === null) ||
+                    (min === null && date <= max) ||
+                    (min <= date && max === null) ||
+                    (min <= date && date <= max)
+                ) {
+                    return true;
+                }
+                return false;
+            }
+        );
+        
+        $(document).ready(function () {
+            // Create date inputs
+            minDate = new DateTime($('#datefilter'), {
+                format: 'MMMM Do YYYY'
+            });
+            maxDate = new DateTime($('#datefilter'), {
+                format: 'MMMM Do YYYY'
+            });
+
+            // DataTables initialisation
+            var table = $('#example').DataTable();
+
+
+            $('input[name="datefilter"]').daterangepicker({
+                autoUpdateInput: false,
+                locale: {
+                    cancelLabel: 'Clear'
+                }
+            });
+            $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+                debugger
+                minDate = picker.startDate.format('YYYY/MM/DD');
+                maxDate = picker.endDate.format('YYYY/MM/DD');
+
+                $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+            });
+
+            $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+                $(this).val('');
+            });
+
+            $("#datefilter").on('change', function () {
+                debugger
+                table.draw();
+            });
+            *//*// Refilter the table
+            $('#min, #max').on('change', function () {
+                table.draw();
+            });*//*
+        });*/
+        /*$(document).ready(function () {
+
+            $('#datefilter').daterangepicker({
+                autoUpdateInput: false,
+                locale: {
+                    cancelLabel: 'Clear'
+                }
+            });
+
+            $('#datefilter').on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                $('#example').DataTable().draw();
+            });
+
+            $('#datefilter').on('cancel.daterangepicker', function (ev, picker) {
+                $(this).val('');
+                $('#example').DataTable().draw();
+            });
+
+            $('#example').DataTable();
+        });*/
 
         $(function () {
             var table = $("#example").DataTable();
@@ -546,8 +629,6 @@
                 });
                 table.draw();
             });
-
-
         });
 
     </script>

@@ -25,7 +25,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="https://wallpaperaccess.com/full/328218.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="images\OnePlus 8T" alt="Los Angeles" style="width:100%;">
           <div class="carousel-caption">
         <h3>Los Angeles</h3>
         <p>LA is always so much fun!</p>
